@@ -31,6 +31,7 @@ What the Python wrappers need to do:
 Description::
 
 SWIG Wrapper 1:
+
 Using the traditional approach to wrap the fill_* methods i.e. using the proxy swig wrappers for MYService. Returns a list of proxy MYService objects.
 
 SWIG Wrapper 2:
