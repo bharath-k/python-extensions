@@ -8,6 +8,7 @@ To build and install all the python extensions:
 $ sudo make build-and-install-extensions
 
 Testing C Code:
+
 $ make
 $ ./example
 
