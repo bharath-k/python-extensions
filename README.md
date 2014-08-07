@@ -5,16 +5,16 @@ This project is a demostration of how to build python wrappers for a C program w
 I have built the wrapper using both SWIG (in two mechanisms) and CPython. Partly it was to convince myself that I time I spent on SWIG was worth it!
 
 To build and install all the python extensions:
-$ sudo make build-and-install-extensions
+
+> sudo make build-and-install-extensions
 
 Testing C Code:
 
-$ make
-
-$ ./example
+> make
+> ./example
 
 Testing extensions after installation:
-$ python test.py
+> python test.py
 
 Objectives::
 
@@ -34,13 +34,13 @@ SWIG Wrapper 1:
 Using the traditional approach to wrap the fill_* methods i.e. using the proxy swig wrappers for MYService. Returns a list of proxy MYService objects.
 
 SWIG Wrapper 2:
-To wrap the fill_* methods, converting the value of MYService stringEntry into a string and return a list of strings.
-Quite a bit of explanations on how the wrappers were written is in the example.i file. I have used typemaps extensively to do this.
+* To wrap the fill_* methods, converting the value of MYService stringEntry into a string and return a list of strings.
+* Quite a bit of explanations on how the wrappers were written is in the example.i file. I have used typemaps extensively to do this.
 
 CPython Wrappers:
-Firstly, one needs to be aware of Python C modules to write wrappers using CPython.
-The example_cpython.c file has extensive comments.
-Also note that I have not implemented all the methods using CPython and only fill_service_array method has been implemented. This is because I thought I'd demostrate the CPython wrapper with the most complex function of all.
+* Firstly, one needs to be aware of Python C modules to write wrappers using CPython.
+* The example_cpython.c file has extensive comments.
+* Also note that I have not implemented all the methods using CPython and only fill_service_array method has been implemented. This is because I thought I'd demostrate the CPython wrapper with the most complex function of all.
 
 Conclusion::
-Much misery was endured to figure all this out! Hope you, the reader, have an easier time...
+* Much misery was endured to figure all this out! Hope you, the reader, have an easier time...
