@@ -10,6 +10,7 @@ $ sudo make build-and-install-extensions
 Testing C Code:
 
 $ make
+
 $ ./example
 
 Testing extensions after installation:
