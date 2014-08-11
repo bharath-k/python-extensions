@@ -15,7 +15,7 @@ get_service()
     // Just malloc a MYService with dummy values.
     MYService *service = NULL;
     service = malloc(sizeof(MYService));
-    char *strval = malloc(5*sizeof(char *));
+    char *strval = malloc(12*sizeof(char *));
     strcpy(strval, "test string");
     service->stringEntry = strval;
     return service;
