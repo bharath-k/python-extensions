@@ -11,6 +11,7 @@ To build and install all the python extensions:
 Testing C Code:
 
 > make
+
 > ./example
 
 Testing extensions after installation:
