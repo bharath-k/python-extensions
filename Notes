@@ -1,0 +1,19 @@
+Here's a link to some of the resources I used:
+
+CPython:
+PyCon 2009: A Whirlwind Excursion through Writing a C Extension:
+http://pyvideo.org/video/230/pycon-2009--a-whirlwind-excursion-through-writing
+
+
+SWIG:
+The SWIG documentation is the best place!! http://www.swig.org/Doc3.0/SWIGDocumentation.html
+
+Interesting conversations on various SWIG topics that were useful:
+http://stackoverflow.com/questions/10328314/wrapping-a-function-that-takes-an-array-of-pointers
+http://stackoverflow.com/questions/9347783/swig-typemap-from-c-struct-to-pylong
+http://stackoverflow.com/questions/15185010/how-to-receive-reference-and-pointer-arguments-in-python-swig
+http://sourceforge.net/p/swig/mailman/message/27417804/
+http://swig.10945.n7.nabble.com/quot-custom-quot-constructor-and-destructor-td778.html
+
+
+
