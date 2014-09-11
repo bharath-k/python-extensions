@@ -1,8 +1,7 @@
 python-extensions
 =================
 
-This project is a demostration of how to build python wrappers for a C program with structs and complicated arguments.
-I have built the wrapper using both SWIG (in two mechanisms) and CPython. Partly it was to convince myself that I time I spent on SWIG was worth it!
+This project is a demostration of how to build python wrappers for a C program that uses structs and has complicated arguments. I have built the wrapper using both SWIG (in two mechanisms) and CPython. Partly it was to convince myself that I time I spent on SWIG was worth it!
 
 To build and install all the python extensions:
 
@@ -45,3 +44,4 @@ CPython Wrappers:
 
 Conclusion::
 * Much misery was endured to figure all this out! Hope you, the reader, have an easier time...
+* Also read Notes for further information.
