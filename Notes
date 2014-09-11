@@ -1,9 +1,5 @@
 Here's a link to some of the resources I used:
 
-CPython:
-PyCon 2009: A Whirlwind Excursion through Writing a C Extension:
-http://pyvideo.org/video/230/pycon-2009--a-whirlwind-excursion-through-writing
-
 
 SWIG:
 The SWIG documentation is the best place!! http://www.swig.org/Doc3.0/SWIGDocumentation.html
@@ -15,5 +11,47 @@ http://stackoverflow.com/questions/15185010/how-to-receive-reference-and-pointer
 http://sourceforge.net/p/swig/mailman/message/27417804/
 http://swig.10945.n7.nabble.com/quot-custom-quot-constructor-and-destructor-td778.html
 
+CPython:
+PyCon 2009: A Whirlwind Excursion through Writing a C Extension:
+http://pyvideo.org/video/230/pycon-2009--a-whirlwind-excursion-through-writing
 
+Notes from conference:
 
+1. Why write in C:
+* Speed
+* Legacy
+* Integration
+* Community
+
+2. The C API is python's foundation. It is use in
+
+* Python's internal API
+* Used to build Python
+* 600 entry points.
+* Only applies to CPython
+
+3. Overall, it's a different world. 
+
+4. C is messy, Python is clean. The extension is the worst of both worlds.
+
+5. Cannot use c++ exceptions.
+
+6. Memory management:
+Every PyObject has a reference count. Manipulate them properly. Otherwise: crashes or leaks. 
+Remember, when you crash in C, you crash in the real world.
+
+7. Types of references: owned (you are responsible) and borrowed(someone else is responsible). This applies 
+to references, not objects.
+
+8. Acquiring owned references:
+* Call a function that returns a "new reference"
+ - Most PyObject* functions.
+ - But not all: read docs carefully.
+* Use Py_INCREF (for borrowed references)
+
+9. How to discard owned references:
+
+Return from a PyObject* function
+Use Py_DECREF
+A few functions steal the reference:
+- PyTyple_SetItem, PyList_SetItem but not PyDict_SetItem or PySequence_SetItem.
